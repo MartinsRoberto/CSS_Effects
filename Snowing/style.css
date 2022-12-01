@@ -1,0 +1,43 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  background-color: #030303;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cloud{
+  color: white;
+  font-size: 40px;
+  position: relative;
+  z-index: 100;
+}
+
+.snow{
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 100%;
+  position: absolute;
+  left: calc(10% * var(--h));
+  animation: animate calc(15s / var(--t)) linear infinite;
+}
+
+@keyframes animate {
+  0%{
+    transform: translateY(-10px);
+  }
+  50%{
+    transform: translateY(50px);
+  }
+  100%{
+    transform: translateY(80px);
+  }
+}
+
