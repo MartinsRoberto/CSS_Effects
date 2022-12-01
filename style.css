@@ -1,0 +1,23 @@
+:root{
+  --blue-1: #4fc3dc44;
+  --blue-2: #4fc3dc;
+  --pink-1: #ff2d7544;
+  --pink-2: #ff2d75;
+}
+
+body{
+  min-height: 100vh;
+  background-color: #030303;
+  font-family: sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: aqua;
+}
+a:visited{
+  color: aqua;
+}
+a:hover{
+  text-decoration: underline;
+}

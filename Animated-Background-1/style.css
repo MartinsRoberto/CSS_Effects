@@ -1,0 +1,57 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+:root{
+  --blue-1: #4fc3dc44;
+  --blue-2: #4fc3dc;
+  --pink-1: #ff2d7544;
+  --pink-2: #ff2d75;
+}
+
+body{
+  min-height: 100vh;
+  background-color: #030303;
+}
+
+.container{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bubbles{
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+span{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: var(--blue-2);
+  border-radius: 100%;
+  box-shadow: 0 0 0 10px var(--blue-1),
+  0 0 50px var(--blue-2),
+  0 0 100px var(--blue-2);
+  animation: animate 10s linear infinite;
+  animation-duration: calc(10s / var(--i));
+}
+span:nth-child(even){
+  background-color: var(--pink-2);
+  box-shadow: 0 0 0 10px var(--pink-1),
+  0 0 50px var(--pink-2),
+  0 0 100px var(--pink-2);
+}
+@keyframes animate {
+  0%{
+    transform: translateY(100vh);
+  }
+  100%{
+    transform: translateY(-10vh);
+  }
+}
