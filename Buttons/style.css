@@ -12,6 +12,7 @@ body{
   align-items: center;
   flex-direction: column;
   gap: 100px;
+  padding: 100px;
 }
 
 .btn1-box{
@@ -111,4 +112,122 @@ body{
 
 .btn2-box:hover::before{
   right: 100px;
+}
+
+.btn3-box{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.btn3-box .btn3{
+  font-family: sans-serif;
+  border: none;
+  padding: 12px 24px;
+  background-color: transparent;
+  border: 3px solid #222222;
+  color: #ff00ff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .4s;
+}
+.btn3-box .line1{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff00ff);
+  position: absolute;
+  top: 0px;
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+  0%{
+    left: -100%;
+  }
+  100%{
+    left: 100%;
+  }
+}
+
+.btn3-box .line2{
+  content: '';
+  display: block;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #ff00ff);
+  position: absolute;
+  right: 0px;
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate2 {
+  0%{
+    top: -100%;
+  }
+  100%{
+    top: 100%;
+  }
+}
+
+.btn3-box .line3{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(180deg, transparent, #ff00ff);
+  position: absolute;
+  bottom: 0px;
+  animation: animate3 1s linear infinite;
+  animation-delay: 2s;
+}
+@keyframes animate3 {
+  0%{
+    right: -100%;
+  }
+  100%{
+    right: 100%;
+  }
+}
+.btn3-box .line4{
+  content: '';
+  display: block;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(0deg, transparent, #ff00ff);
+  position: absolute;
+  left: 0px;
+  animation: animate4 1s linear infinite;
+  animation-delay: 2.5s;
+}
+@keyframes animate4 {
+  0%{
+    top: 100%;
+  }
+  100%{
+    top: -100%;
+  }
+}
+
+
+.btn4-box{
+  font-family: sans-serif;
+  background: #ff00ff77;
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn4-box .btn4{
+  font-size: 20px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  transform: translateY(-6px);
+  background-color: #ff00ff;
+}
+
+.btn4-box:active .btn4 {
+  transform: translateY(0px);
 }
